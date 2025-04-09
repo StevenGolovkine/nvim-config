@@ -1,4 +1,17 @@
-# 💤 LazyVim
+# 💤 My LazyVim configuration
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+
+This repository contains my NeoVim configuration. It is based on the [LazyVim](https://github.com/LazyVim/LazyVim) setup with the help of the [nvim-config](https://github.com/jmbuhr/nvim-config).
+
+Features: 
+- [ ] Language Server Protocol
+- [ ] Autocompletion
+- [ ] Latex
+- [ ] Python
+- [ ] Julia
+- [ ] R 
+- [ ] Quarto
+- [ ] Notes
+- [ ] Projects
+
+
