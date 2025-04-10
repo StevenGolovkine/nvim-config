@@ -118,3 +118,10 @@ wk.add({
     { "<localleader>or", insert_r_chunk, desc = "[r] code chunk" },
   },
 }, { mode = "n" })
+
+-- Keymaps related to Molten
+wk.add({
+  {
+    { "<localleader>m", group = "[m]olten" },
+  },
+}, { mode = "n" })

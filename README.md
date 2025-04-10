@@ -5,6 +5,23 @@ This repository contains my NeoVim configuration. It is based on the [LazyVim](h
 
 Features: 
 - [ ] Language Server Protocol
+  - CSS (css-lsp)
+  - Emmet abbreviation (emmet-ls)
+  - Julia (julia-lsp)
+  - Lua (lua-language-server)
+  - Markdown (marksman)
+  - Python (pyright)
+  - R (r-languageserver)
+  - Latex (texlab)
+  - YAML (yaml-language-server)
+- [ ] Debug Adapter Protocol
+  - Python (debugpy)
+- [ ] Linter
+  - Python (ruff)
+- [ ] Formatter
+  - Python (black, isort, ruff)
+  - Bash (shfmt)
+  - Lua (stylua)
 - [ ] Autocompletion
 - [ ] Latex
 - [ ] Python
@@ -14,4 +31,10 @@ Features:
 - [ ] Notes
 - [ ] Projects
 
-
+Snippets: 
+- [ ] Apply to all files
+- [ ] Markdown
+- [ ] Python
+- [ ] Quarto
+- [ ] Latex
+- [ ] R

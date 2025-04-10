@@ -29,4 +29,36 @@ return {
     ),
     { condition = line_begin }
   ),
+
+  s(
+    {
+      trig = "h2",
+      desc = "Subsection",
+      snippetType = "autosnippet",
+    },
+    fmt(
+      [[
+        \subsection{<>}
+      ]],
+      { i(1) },
+      { delimiters = "<>" }
+    ),
+    { condition = line_begin }
+  ),
+
+  s(
+    {
+      trig = "h3",
+      desc = "Subsubsection",
+      snippetType = "autosnippet",
+    },
+    fmt(
+      [[
+        \subsubsection{<>}
+      ]],
+      { i(1) },
+      { delimiters = "<>" }
+    ),
+    { condition = line_begin }
+  ),
 }

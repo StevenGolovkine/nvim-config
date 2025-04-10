@@ -13,7 +13,7 @@ return {
 
   s(
     {
-      trig = "//",
+      trig = "ff",
       desc = "\frac{}{}",
       snippetType = "autosnippet",
     },

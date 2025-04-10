@@ -17,8 +17,8 @@ return {
         auto_install = true,
         ensure_installed = {
           -- LaTeX LaTeX
-          "bibtex",
-          "latex",
+          -- "bibtex",
+          -- "latex",
           -- Programming languages
           "css",
           "html",
@@ -43,7 +43,8 @@ return {
         },
         highlight = {
           enable = true,
-          additional_vim_regex_highlighting = false,
+          disable = { "latex" },
+          additional_vim_regex_highlighting = { "latex", "markdown" },
         },
         indent = {
           enable = true,

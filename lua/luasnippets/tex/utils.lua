@@ -29,6 +29,14 @@ tex_utils.in_itemize = function()
   return tex_utils.in_env("itemize")
 end
 
+tex_utils.in_enumerate = function()
+  return tex_utils.in_env("enumerate")
+end
+
+tex_utils.in_description = function()
+  return tex_utils.in_env("description")
+end
+
 tex_utils.in_tikz = function()
   return tex_utils.in_env("tikzpicture")
 end
