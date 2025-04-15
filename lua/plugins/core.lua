@@ -3,12 +3,12 @@
 return {
 
   -- Theme
-  { "shaunsingh/nord.nvim" },
+  { "catppuccin/nvim" },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nord",
+      colorscheme = "catppuccin-frappe",
     },
   },
 }
