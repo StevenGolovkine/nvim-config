@@ -1,4 +1,4 @@
--- ~/.config/nvim/luasnip/markdown.lua
+-- ~/.config/nvim/luasnip/yaml.lua
 
 local ls = require("luasnip")
 local s = ls.snippet

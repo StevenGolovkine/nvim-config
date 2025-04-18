@@ -260,4 +260,40 @@ return {
       { delimiters = "<>" }
     )
   ),
+
+  s(
+    {
+      trig = "pmat",
+      desc = "begin{pmat} / end{pmat}",
+      snippetType = "autosnippet",
+      condition = tex_utils.in_mathzone,
+    },
+    fmt(
+      [[
+        \begin{pmatrix}
+          <>
+        \end{pmatrix}
+      ]],
+      { i(1) },
+      { delimiters = "<>" }
+    )
+  ),
+
+  s(
+    {
+      trig = "bmat",
+      desc = "begin{bmat} / end{bmat}",
+      snippetType = "autosnippet",
+      condition = tex_utils.in_mathzone,
+    },
+    fmt(
+      [[
+        \begin{bmatrix}
+          <>
+        \end{bmatrix}
+      ]],
+      { i(1) },
+      { delimiters = "<>" }
+    )
+  ),
 }
