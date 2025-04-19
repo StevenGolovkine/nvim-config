@@ -1068,4 +1068,137 @@ return {
       { delimiters = "<>" }
     )
   ),
+
+  s(
+    {
+      trig = "(%a)_(%d%d)",
+      desc = "Auto subscripts",
+      snippetType = "autosnippet",
+      wordTrig = false,
+      regTrig = true,
+      condition = tex_utils.in_mathzone,
+    },
+    fmt(
+      [[
+        <>_{<>}
+      ]],
+      {
+        f(function(_, snip)
+          return snip.captures[1]
+        end),
+        f(function(_, snip)
+          return snip.captures[2]
+        end),
+      },
+      { delimiters = "<>" }
+    )
+  ),
+
+  s(
+    {
+      trig = "(%a)__",
+      desc = "Subscripts",
+      snippetType = "autosnippet",
+      regTrig = true,
+      condition = tex_utils.in_mathzone,
+    },
+    fmt(
+      [[
+        <>_{<>}
+      ]],
+      {
+        f(function(_, snip)
+          return snip.captures[1]
+        end),
+        i(1),
+      },
+      { delimiters = "<>" }
+    )
+  ),
+
+  -- Superscripts
+  s(
+    {
+      trig = "(%a)^t",
+      desc = "Transpose",
+      snippetType = "autosnippet",
+      regTrig = true,
+      condition = tex_utils.in_mathzone,
+    },
+    fmt(
+      [[
+        <>^{\top}
+      ]],
+      {
+        f(function(_, snip)
+          return snip.captures[1]
+        end),
+      },
+      { delimiters = "<>" }
+    )
+  ),
+
+  s(
+    {
+      trig = "(%a)^^",
+      desc = "Superscripts",
+      snippetType = "autosnippet",
+      regTrig = true,
+      condition = tex_utils.in_mathzone,
+    },
+    fmt(
+      [[
+        <>^{<>}
+      ]],
+      {
+        f(function(_, snip)
+          return snip.captures[1]
+        end),
+        i(1),
+      },
+      { delimiters = "<>" }
+    )
+  ),
+
+  s(
+    {
+      trig = "(%a)sr",
+      desc = "Square ^{2}",
+      snippetType = "autosnippet",
+      regTrig = true,
+      condition = tex_utils.in_mathzone,
+    },
+    fmt(
+      [[
+        <>^{2}
+      ]],
+      {
+        f(function(_, snip)
+          return snip.captures[1]
+        end),
+      },
+      { delimiters = "<>" }
+    )
+  ),
+
+  s(
+    {
+      trig = "(%a)inv",
+      desc = "Inverse",
+      snippetType = "autosnippet",
+      regTrig = true,
+      condition = tex_utils.in_mathzone,
+    },
+    fmt(
+      [[
+        <>^{-1}
+      ]],
+      {
+        f(function(_, snip)
+          return snip.captures[1]
+        end),
+      },
+      { delimiters = "<>" }
+    )
+  ),
 }

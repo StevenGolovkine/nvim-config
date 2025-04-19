@@ -1,4 +1,4 @@
--- ~/.config/nvim/lua/luasnippets/tex/packages/hyperref.lua
+-- ~/.config/nvim/lua/luasnippets/tex/hyperref.lua
 
 local ls = require("luasnip")
 local s = ls.snippet
