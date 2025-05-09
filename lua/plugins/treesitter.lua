@@ -36,14 +36,14 @@ return {
           "vimdoc",
           "yaml",
           -- Misc
-          "markdown",
-          "markdown_inline",
-          "mermaid",
-          "norg",
+          -- "markdown",
+          -- "markdown_inline",
+          -- "mermaid",
+          -- "norg",
         },
         highlight = {
           enable = true,
-          disable = { "latex" },
+          disable = { "latex", "markdown" },
           additional_vim_regex_highlighting = { "latex", "markdown" },
         },
         indent = {

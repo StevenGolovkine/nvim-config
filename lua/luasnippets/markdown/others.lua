@@ -18,7 +18,7 @@ return {
         \usepackage[<>]{<>}
       ]],
       {
-        i(1),
+        i(1, "options"),
         i(2, "package"),
       },
       { delimiters = "<>" }

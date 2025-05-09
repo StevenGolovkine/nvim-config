@@ -3,6 +3,8 @@
 return {
   "lervag/vimtex",
   lazy = false,
+  version = "2.16",
+  dev = false,
   config = function()
     vim.g.vimtex_view_enabled = 1
     vim.g.vimtex_view_method = "skim"

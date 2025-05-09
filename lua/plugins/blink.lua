@@ -4,7 +4,6 @@ return {
 
   {
     "saghen/blink.cmp",
-    enabled = true,
     version = not vim.g.lazyvim_blink_main and "*",
     dev = false,
     lazy = false,
@@ -25,8 +24,11 @@ return {
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
+      enabled = function()
+        return not vim.tbl_contains({ "tex" }, vim.bo.filetype)
+      end,
       keymap = {
-        preset = "enter",
+        -- preset = "enter",
         ["<c-y>"] = { "show_documentation", "hide_documentation" },
       },
       cmdline = {
