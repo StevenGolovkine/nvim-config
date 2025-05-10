@@ -15,7 +15,7 @@ return {
 
   s(
     {
-      trig = "tt",
+      trig = "ttt",
       desc = "\texttt{}",
       snippetType = "autosnippet",
     },
@@ -45,7 +45,7 @@ return {
 
   s(
     {
-      trig = "it",
+      trig = "tit",
       desc = "\textit{}",
       snippetType = "autosnippet",
     },

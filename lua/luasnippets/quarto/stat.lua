@@ -18,7 +18,7 @@ return {
     {
       trig = "EE",
       desc = "Expectation",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -36,7 +36,7 @@ return {
     {
       trig = "var",
       desc = "Variance",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -54,7 +54,7 @@ return {
     {
       trig = "cov",
       desc = "Covariance",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -72,7 +72,7 @@ return {
     {
       trig = "cor",
       desc = "Correlation",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -91,7 +91,7 @@ return {
     {
       trig = "loin",
       desc = "Gaussian distribution",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(

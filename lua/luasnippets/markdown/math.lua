@@ -2,14 +2,14 @@
 
 local ls = require("luasnip")
 local s = ls.snippet
-local ms = ls.multi_snippet
+-- local ms = ls.multi_snippet
 -- local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
 local d = ls.dynamic_node
 local fmt = require("luasnip.extras.fmt").fmt
 local get_visual = require("luasnippets.utils").get_visual
-local tex_utils = require("luasnippets.markdown.utils")
+local tex_utils = require("luasnippets.markdown.detect-mathzone")
 
 -- Math related snippets
 return {
@@ -18,7 +18,7 @@ return {
     {
       trig = "ff",
       desc = "\frac{}{}",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -37,7 +37,7 @@ return {
     {
       trig = "ff",
       desc = "\frac{}{} in visual mode",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
       priority = 10000,
     },
@@ -57,7 +57,7 @@ return {
     {
       trig = "bar",
       desc = "add bar",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -75,7 +75,7 @@ return {
     {
       trig = "(%a+)bar",
       desc = "postfix add bar",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       wordtrig = false,
       regtrig = true,
       condition = tex_utils.in_mathzone,
@@ -98,7 +98,7 @@ return {
     {
       trig = "hat",
       desc = "add hat",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -116,7 +116,7 @@ return {
     {
       trig = "(%a+)hat",
       desc = "postfix add hat",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       wordtrig = false,
       regtrig = true,
       condition = tex_utils.in_mathzone,
@@ -135,36 +135,36 @@ return {
     )
   ),
 
-  ms(
-    {
-      "(%a+)(%.,)",
-      "(%a+)(,%.)",
-      common = {
-        desc = "postfix add vector",
-        snippettype = "autosnippet",
-        wordtrig = false,
-        regtrig = true,
-        condition = tex_utils.in_mathzone,
-      },
-    },
-    fmt(
-      [[
-        \vec{<>}
-      ]],
-      {
-        f(function(_, snip)
-          return snip.captures[1]
-        end),
-      },
-      { delimiters = "<>" }
-    )
-  ),
+  --ms(
+  --  {
+  --    "(%a+)(%.,)",
+  --    "(%a+)(,%.)",
+  --    common = {
+  --      desc = "postfix add vector",
+  --      snippetType = "autosnippet",
+  --      wordtrig = false,
+  --      regtrig = true,
+  --      condition = tex_utils.in_mathzone,
+  --    },
+  --  },
+  --  fmt(
+  --    [[
+  --      \vec{<>}
+  --    ]],
+  --    {
+  --      f(function(_, snip)
+  --        return snip.captures[1]
+  --      end),
+  --    },
+  --    { delimiters = "<>" }
+  --  )
+  --),
 
   s(
     {
       trig = "ooo",
       desc = "add infty",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -180,7 +180,7 @@ return {
     {
       trig = "~~",
       desc = "add sim",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -196,7 +196,7 @@ return {
     {
       trig = "...",
       desc = "add dots",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -208,27 +208,27 @@ return {
     )
   ),
 
-  s(
-    {
-      trig = "=>",
-      desc = "add implies",
-      snippettype = "autosnippet",
-      condition = tex_utils.in_mathzone,
-    },
-    fmt(
-      [[
-        \implies
-      ]],
-      {},
-      {}
-    )
-  ),
+  -- s(
+  --   {
+  --     trig = "=>",
+  --     desc = "add implies",
+  --     snippetType = "autosnippet",
+  --     condition = tex_utils.in_mathzone,
+  --   },
+  --   fmt(
+  --     [[
+  --       \implies
+  --     ]],
+  --     {},
+  --     {}
+  --   )
+  -- ),
 
   s(
     {
       trig = "=<",
       desc = "add impliedby",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -240,59 +240,59 @@ return {
     )
   ),
 
-  s(
-    {
-      trig = "->",
-      desc = "add to",
-      snippettype = "autosnippet",
-      condition = tex_utils.in_mathzone,
-    },
-    fmt(
-      [[
-        \to
-      ]],
-      {},
-      {}
-    )
-  ),
+  -- s(
+  --   {
+  --     trig = "->",
+  --     desc = "add to",
+  --     snippetType = "autosnippet",
+  --     condition = tex_utils.in_mathzone,
+  --   },
+  --   fmt(
+  --     [[
+  --       \to
+  --     ]],
+  --     {},
+  --     {}
+  --   )
+  -- ),
 
-  s(
-    {
-      trig = "<->",
-      desc = "add leftrightarrow",
-      snippettype = "autosnippet",
-      condition = tex_utils.in_mathzone,
-    },
-    fmt(
-      [[
-        \leftrightarrow
-      ]],
-      {},
-      {}
-    )
-  ),
+  -- s(
+  --   {
+  --     trig = "<->",
+  --     desc = "add leftrightarrow",
+  --     snippetType = "autosnippet",
+  --     condition = tex_utils.in_mathzone,
+  --   },
+  --   fmt(
+  --     [[
+  --       \leftrightarrow
+  --     ]],
+  --     {},
+  --     {}
+  --   )
+  -- ),
 
-  s(
-    {
-      trig = "|>",
-      desc = "add mapsto",
-      snippettype = "autosnippet",
-      condition = tex_utils.in_mathzone,
-    },
-    fmt(
-      [[
-        \mapsto
-      ]],
-      {},
-      {}
-    )
-  ),
+  -- s(
+  --   {
+  --     trig = "|>",
+  --     desc = "add mapsto",
+  --     snippetType = "autosnippet",
+  --     condition = tex_utils.in_mathzone,
+  --   },
+  --   fmt(
+  --     [[
+  --       \mapsto
+  --     ]],
+  --     {},
+  --     {}
+  --   )
+  -- ),
 
   s(
     {
       trig = "iff",
       desc = "add iff",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -308,7 +308,7 @@ return {
     {
       trig = "==",
       desc = "equals in align environment",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -324,7 +324,7 @@ return {
     {
       trig = "!=",
       desc = "not equals",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -340,7 +340,7 @@ return {
     {
       trig = "<=",
       desc = "less or equals",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -356,7 +356,7 @@ return {
     {
       trig = ">=",
       desc = "greater or equals",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -368,27 +368,27 @@ return {
     )
   ),
 
-  s(
-    {
-      trig = ">>",
-      desc = "much greater than",
-      snippettype = "autosnippet",
-      condition = tex_utils.in_mathzone,
-    },
-    fmt(
-      [[
-        \gg
-      ]],
-      {},
-      {}
-    )
-  ),
+  -- s(
+  --   {
+  --     trig = ">>",
+  --     desc = "much greater than",
+  --     snippetType = "autosnippet",
+  --     condition = tex_utils.in_mathzone,
+  --   },
+  --   fmt(
+  --     [[
+  --       \gg
+  --     ]],
+  --     {},
+  --     {}
+  --   )
+  -- ),
 
   s(
     {
       trig = "<<",
       desc = "much lesser than",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -404,7 +404,7 @@ return {
     {
       trig = "ee",
       desc = "it exists",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -420,7 +420,7 @@ return {
     {
       trig = "aa",
       desc = "for all",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -436,7 +436,7 @@ return {
     {
       trig = "lll",
       desc = "\\ell",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -452,7 +452,7 @@ return {
     {
       trig = "nab",
       desc = "\\nabla",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -468,7 +468,7 @@ return {
     {
       trig = "xx",
       desc = "\\times",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -484,7 +484,7 @@ return {
     {
       trig = "**",
       desc = "\\cdot",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -500,7 +500,7 @@ return {
     {
       trig = "||",
       desc = "\\mid",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -516,7 +516,7 @@ return {
     {
       trig = "cc",
       desc = "\\subset",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -532,7 +532,7 @@ return {
     {
       trig = "inn",
       desc = "\\in",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -548,7 +548,7 @@ return {
     {
       trig = "notin",
       desc = "\\notin",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -562,9 +562,9 @@ return {
 
   s(
     {
-      trig = "nn",
+      trig = "mnn",
       desc = "\\cap",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -578,9 +578,9 @@ return {
 
   s(
     {
-      trig = "uu",
+      trig = "iuu",
       desc = "\\cup",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -592,51 +592,51 @@ return {
     )
   ),
 
-  ms(
-    {
-      "(%s)(cos)",
-      "(%s)(sin)",
-      "(%s)(arccot)",
-      "(%s)(cot)",
-      "(%s)(csc)",
-      "(%s)(ln)",
-      "(%s)(log)",
-      "(%s)(exp)",
-      "(%s)(star)",
-      "(%s)(perp)",
-      "(%s)(arcsin)",
-      "(%s)(arccos)",
-      "(%s)(arctan)",
-      "(%s)(arccot)",
-      "(%s)(arccsc)",
-      "(%s)(pi)",
-      "(%s)(zeta)",
-      common = {
-        desc = "apply latex to math",
-        snippettype = "autosnippet",
-        wordtrig = false,
-        regtrig = true,
-        condition = tex_utils.in_mathzone,
-      },
-    },
-    fmt(
-      [[
-        \<>
-      ]],
-      {
-        f(function(_, snip)
-          return snip.captures[2]
-        end),
-      },
-      { delimiters = "<>" }
-    )
-  ),
+  --ms(
+  --  {
+  --    "(%s)(cos)",
+  --    "(%s)(sin)",
+  --    "(%s)(arccot)",
+  --    "(%s)(cot)",
+  --    "(%s)(csc)",
+  --    "(%s)(ln)",
+  --    "(%s)(log)",
+  --    "(%s)(exp)",
+  --    "(%s)(star)",
+  --    "(%s)(perp)",
+  --    "(%s)(arcsin)",
+  --    "(%s)(arccos)",
+  --    "(%s)(arctan)",
+  --    "(%s)(arccot)",
+  --    "(%s)(arccsc)",
+  --    "(%s)(pi)",
+  --    "(%s)(zeta)",
+  --    common = {
+  --      desc = "apply latex to math",
+  --      snippetType = "autosnippet",
+  --      wordtrig = false,
+  --      regtrig = true,
+  --      condition = tex_utils.in_mathzone,
+  --    },
+  --  },
+  --  fmt(
+  --    [[
+  --      \<>
+  --    ]],
+  --    {
+  --      f(function(_, snip)
+  --        return snip.captures[2]
+  --      end),
+  --    },
+  --    { delimiters = "<>" }
+  --  )
+  --),
 
   s(
     {
       trig = "ceil",
       desc = "ceil",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
@@ -654,7 +654,7 @@ return {
     {
       trig = "floor",
       desc = "floor",
-      snippettype = "autosnippet",
+      snippetType = "autosnippet",
       condition = tex_utils.in_mathzone,
     },
     fmt(
