@@ -59,7 +59,7 @@ return {
     },
     fmt(
       [[
-        \mathrm{Cov}<>  
+        \mathrm{Cov}<>
       ]],
       {
         i(0),
@@ -77,7 +77,7 @@ return {
     },
     fmt(
       [[
-        \mathrm{Corr}<>  
+        \mathrm{Corr}<>
       ]],
       {
         i(0),

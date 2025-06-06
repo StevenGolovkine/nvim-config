@@ -17,7 +17,6 @@ return {
     {
       trig = "ttt",
       desc = "\texttt{}",
-      snippetType = "autosnippet",
     },
     fmt(
       [[
@@ -47,7 +46,6 @@ return {
     {
       trig = "tit",
       desc = "\textit{}",
-      snippetType = "autosnippet",
     },
     fmt(
       [[

@@ -272,21 +272,21 @@ return {
   --   )
   -- ),
 
-  -- s(
-  --   {
-  --     trig = "|>",
-  --     desc = "add mapsto",
-  --     snippetType = "autosnippet",
-  --     condition = tex_utils.in_mathzone,
-  --   },
-  --   fmt(
-  --     [[
-  --       \mapsto
-  --     ]],
-  --     {},
-  --     {}
-  --   )
-  -- ),
+  s(
+    {
+      trig = "|>",
+      desc = "add mapsto",
+      snippetType = "autosnippet",
+      condition = tex_utils.in_mathzone,
+    },
+    fmt(
+      [[
+        \mapsto
+      ]],
+      {},
+      {}
+    )
+  ),
 
   s(
     {

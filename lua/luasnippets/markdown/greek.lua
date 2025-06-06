@@ -38,7 +38,7 @@ return {
   s({ trig = ";s", snippetType = "autosnippet", hidden = true }, { t("\\sigma") }),
   s({ trig = ";y", snippetType = "autosnippet", hidden = true }, { t("\\tau") }),
   s({ trig = ";f", snippetType = "autosnippet", hidden = true }, { t("\\phi") }),
-  s({ trig = ";x", snippetType = "autosnippet", hidden = true }, { t("\\xhi") }),
+  s({ trig = ";x", snippetType = "autosnippet", hidden = true }, { t("\\chi") }),
   s({ trig = ";c", snippetType = "autosnippet", hidden = true }, { t("\\psi") }),
   s({ trig = ";o", snippetType = "autosnippet", hidden = true }, { t("\\omega") }),
   s({ trig = ";vg", snippetType = "autosnippet", hidden = true }, { t("\\digamma") }),

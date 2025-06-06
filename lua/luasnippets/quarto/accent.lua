@@ -32,4 +32,7 @@ return {
   s({ trig = '\\"E', snippetType = "autosnippet", hidden = true, wordTrig = false }, { t("Ë") }),
   s({ trig = '\\"I', snippetType = "autosnippet", hidden = true, wordTrig = false }, { t("Ï") }),
   s({ trig = '\\"U', snippetType = "autosnippet", hidden = true, wordTrig = false }, { t("Ü") }),
+
+  s({ trig = "\\cc", snippetType = "autosnippet", hidden = true, wordTrig = false }, { t("ç") }),
+  s({ trig = "--", snippetType = "autosnippet", hidden = true, wordTrig = false }, { t("—") }),
 }

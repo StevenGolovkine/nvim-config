@@ -726,7 +726,7 @@ return {
     },
     fmt(
       [[
-        \left{ <> \right}
+        \left\{ <> \right\}
       ]],
       {
         d(1, get_visual),
