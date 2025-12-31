@@ -96,6 +96,47 @@ return {
 
   s(
     {
+      trig = "tilde",
+      desc = "add tilde",
+      snippetType = "autosnippet",
+      condition = tex_utils.in_mathzone,
+    },
+    fmt(
+      [[
+        \widetilde{<>}
+      ]],
+      {
+        i(1),
+      },
+      { delimiters = "<>" }
+    )
+  ),
+
+  s(
+    {
+      trig = "(%a+)tilde",
+      desc = "postfix add tilde",
+      snippetType = "autosnippet",
+      wordtrig = false,
+      regtrig = true,
+      condition = tex_utils.in_mathzone,
+      priority = 10000,
+    },
+    fmt(
+      [[
+        \widetilde{<>}
+      ]],
+      {
+        f(function(_, snip)
+          return snip.captures[1]
+        end),
+      },
+      { delimiters = "<>" }
+    )
+  ),
+
+  s(
+    {
       trig = "hat",
       desc = "add hat",
       snippetType = "autosnippet",
@@ -136,28 +177,28 @@ return {
   ),
 
   ms(
-   {
-     "(%a+)(%.,)",
-     "(%a+)(,%.)",
-     common = {
-       desc = "postfix add vector",
-       snippetType = "autosnippet",
-       wordtrig = false,
-       regtrig = true,
-       condition = tex_utils.in_mathzone,
-     },
-   },
-   fmt(
-     [[
+    {
+      "(%a+)(%.,)",
+      "(%a+)(,%.)",
+      common = {
+        desc = "postfix add vector",
+        snippetType = "autosnippet",
+        wordtrig = false,
+        regtrig = true,
+        condition = tex_utils.in_mathzone,
+      },
+    },
+    fmt(
+      [[
        \vec{<>}
      ]],
-     {
-       f(function(_, snip)
-         return snip.captures[1]
-       end),
-     },
-     { delimiters = "<>" }
-   )
+      {
+        f(function(_, snip)
+          return snip.captures[1]
+        end),
+      },
+      { delimiters = "<>" }
+    )
   ),
 
   s(
@@ -593,43 +634,43 @@ return {
   ),
 
   ms(
-   {
-     "(%s)(cos)",
-     "(%s)(sin)",
-     "(%s)(arccot)",
-     "(%s)(cot)",
-     "(%s)(csc)",
-     "(%s)(ln)",
-     "(%s)(log)",
-     "(%s)(exp)",
-     "(%s)(star)",
-     "(%s)(perp)",
-     "(%s)(arcsin)",
-     "(%s)(arccos)",
-     "(%s)(arctan)",
-     "(%s)(arccot)",
-     "(%s)(arccsc)",
-     "(%s)(pi)",
-     "(%s)(zeta)",
-     common = {
-       desc = "apply latex to math",
-       snippetType = "autosnippet",
-       wordtrig = false,
-       regtrig = true,
-       condition = tex_utils.in_mathzone,
-     },
-   },
-   fmt(
-     [[
+    {
+      "(%s)(cos)",
+      "(%s)(sin)",
+      "(%s)(arccot)",
+      "(%s)(cot)",
+      "(%s)(csc)",
+      "(%s)(ln)",
+      "(%s)(log)",
+      "(%s)(exp)",
+      "(%s)(star)",
+      "(%s)(perp)",
+      "(%s)(arcsin)",
+      "(%s)(arccos)",
+      "(%s)(arctan)",
+      "(%s)(arccot)",
+      "(%s)(arccsc)",
+      "(%s)(pi)",
+      "(%s)(zeta)",
+      common = {
+        desc = "apply latex to math",
+        snippetType = "autosnippet",
+        wordtrig = false,
+        regtrig = true,
+        condition = tex_utils.in_mathzone,
+      },
+    },
+    fmt(
+      [[
        \<>
      ]],
-     {
-       f(function(_, snip)
-         return snip.captures[2]
-       end),
-     },
-     { delimiters = "<>" }
-   )
+      {
+        f(function(_, snip)
+          return snip.captures[2]
+        end),
+      },
+      { delimiters = "<>" }
+    )
   ),
 
   s(

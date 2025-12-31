@@ -32,7 +32,7 @@ return {
         },
       },
 
-      notes_subdir = "notes",
+      notes_subdir = "content/notes",
 
       log_level = vim.log.levels.INFO,
 

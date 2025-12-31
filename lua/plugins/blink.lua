@@ -8,7 +8,7 @@ return {
     dev = false,
     lazy = false,
     dependencies = {
-      { "moyiz/blink-emoji.nvim" },
+      { "moyiz/blink-emoji.nvim", enabled = false },
       { "Kaiser-Yang/blink-cmp-git" },
       {
         "saghen/blink.compat",
@@ -35,13 +35,13 @@ return {
         enabled = false,
       },
       sources = {
-        default = { "lazydev", "lsp", "path", "references", "git", "snippets", "buffer", "emoji" },
+        default = { "lazydev", "lsp", "path", "references", "git", "snippets", "buffer" }, -- "emoji" },
         providers = {
-          emoji = {
-            module = "blink-emoji",
-            name = "Emoji",
-            score_offset = -1,
-          },
+          --emoji = {
+          --  module = "blink-emoji",
+          --  name = "Emoji",
+          --  score_offset = -1,
+          --},
           lazydev = {
             name = "LazyDev",
             module = "lazydev.integrations.blink",

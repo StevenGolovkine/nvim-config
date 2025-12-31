@@ -125,3 +125,5 @@ wk.add({
     { "<localleader>m", group = "[m]olten" },
   },
 }, { mode = "n" })
+
+-- Shortcut keymaps
